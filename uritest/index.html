@@ -42,7 +42,7 @@
         'Invalid request. Please try connecting again.';
     } else {
       window.opener.postMessage({
-        type: 'TEAMS_OAUTH_CALLBACK',
+        type: 'KUBARU_TEAMS_OAUTH_CALLBACK',
         code: code,
         state: state,
         error: error,
