@@ -51,7 +51,7 @@
         }
 
         // Validate origin matches Salesforce domain patterns
-        const validOriginPattern = /^https:\/\/[a-z0-9-]+\.(lightning\.force|my\.salesforce|salesforce|visualforce)\.com$/;
+        const validOriginPattern = /^https:\/\/.*?\.(lightning\.force|my\.salesforce|salesforce|visualforce)\.com$/;
         console.log('Target Origin:', targetOrigin);
         const originIsValid = targetOrigin && validOriginPattern.test(targetOrigin);
 
