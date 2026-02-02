@@ -52,6 +52,7 @@
 
         // Validate origin matches Salesforce domain patterns
         const validOriginPattern = /^https:\/\/[a-z0-9-]+\.(lightning\.force|my\.salesforce|salesforce|visualforce)\.com$/;
+        console.log('Target Origin:', targetOrigin);
         const originIsValid = targetOrigin && validOriginPattern.test(targetOrigin);
 
         if (!window.opener)
@@ -73,7 +74,7 @@
                 errorDescription: params.get('error_description')
             }, targetOrigin);
 
-            window.close(); // comment
+            window.close();
         }
     </script>
 </body>
